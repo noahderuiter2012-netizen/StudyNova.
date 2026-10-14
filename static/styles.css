@@ -344,3 +344,14 @@ input[type="checkbox"], input[type="radio"] { width: auto; accent-color: var(--p
   .lesson-actions { flex-direction: column; }
   .lesson-actions button { width: 100%; }
 }
+
+
+/* StudyNova hotfix: herstel lege pagina's na inloggen */
+.tab-panel:not(.hidden) {
+  display: block !important;
+}
+
+.tab-panel.hidden,
+.hidden {
+  display: none !important;
+}
