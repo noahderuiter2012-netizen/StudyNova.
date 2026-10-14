@@ -1,1 +1,76 @@
+<!doctype html>
+<html lang="nl">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#6c5ce7"><title>StudyNova — Slim leren, level up!</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+<div class="blob blob-a"></div><div class="blob blob-b"></div>
+<div id="authView" class="auth-shell">
+  <div class="brand"><span class="brand-mark">✦</span><span>Study<span class="brand-pop">Nova</span></span></div>
+  <div class="auth-card">
+    <div class="mascot">🦊</div><p class="eyebrow">JOUW SLIMME LEERMAATJE</p>
+    <h1 id="authTitle">Klaar om te <span>levelen?</span></h1>
+    <p class="muted" id="authSubtitle">Log in en maak van huiswerk een avontuur.</p>
+    <form id="authForm">
+      <div id="nameField" class="field hidden"><label for="displayName">Hoe mogen we je noemen?</label><input id="displayName" maxlength="50" placeholder="Jouw naam"></div>
+      <div class="field"><label for="email">E-mailadres</label><input id="email" type="email" required autocomplete="email" placeholder="jij@voorbeeld.nl"></div>
+      <div class="field"><label for="password">Wachtwoord (min. 8 tekens)</label><input id="password" type="password" required minlength="8" autocomplete="current-password" placeholder="••••••••"></div>
+      <button class="btn primary full" id="authSubmit">🚀 Inloggen</button>
+      <p id="authError" class="error" role="alert"></p>
+    </form>
+    <p class="switch-line"><span id="switchText">Nog geen account?</span> <button id="switchAuth" class="text-btn">Maak er een!</button></p>
+  </div>
+  <p class="tiny-note">🔒 Je voortgang wordt gekoppeld aan jouw account.</p>
+</div>
 
+<div id="appView" class="app-shell hidden">
+  <aside class="sidebar">
+    <div class="brand"><span class="brand-mark">✦</span><span>Study<span class="brand-pop">Nova</span></span></div>
+    <div class="profile-chip"><div class="avatar">🧑‍🚀</div><div><strong id="helloName">Leerling</strong><small>Ruimtecadet in opleiding</small></div></div>
+    <nav>
+      <button class="nav-item active" data-tab="home"><span>🏡</span> Overzicht</button>
+      <button class="nav-item" data-tab="books"><span>📚</span> Mijn boeken</button>
+      <button class="nav-item" data-tab="tutor"><span>🧠</span> AI-huiswerkcoach</button>
+      <button class="nav-item" data-tab="practice"><span>🎯</span> Oefenen</button>
+    </nav>
+    <div class="sidebar-bottom"><div class="mini-mission"><span>✨</span><strong>Elke dag een beetje slimmer!</strong><small>Jij kunt dit.</small></div><button id="logoutBtn" class="nav-item logout"><span>↪</span> Uitloggen</button></div>
+  </aside>
+  <main class="main-content">
+    <header class="topbar"><div><p class="eyebrow">WOENSDAG • JOUW LEERUNIVERSUM</p><h2 id="pageTitle">Let's go, leerling! 👋</h2></div><div class="top-stats"><div class="stat-pill">⚡ <strong id="xpTop">0</strong> XP</div><div class="stat-pill">🔥 <strong>0</strong></div><div class="top-avatar">🧑‍🚀</div></div></header>
+    <section id="homeTab" class="tab-panel">
+      <div class="hero-card"><div class="hero-copy"><span class="hero-tag">🚀 MISSIE VAN VANDAAG</span><h1>Kleine stappen.<br><span>Grote sprongen.</span></h1><p>Ontdek iets nieuws, stel vragen en verdien XP terwijl je leert.</p><button class="btn white" data-goto="tutor">Start met leren <span>→</span></button></div><div class="hero-art"><div class="planet">🌎</div><div class="orbit orbit1"></div><div class="orbit orbit2"></div><span class="star s1">✦</span><span class="star s2">✧</span><span class="star s3">✦</span></div></div>
+      <div class="section-heading"><div><h3>Jouw leerstation</h3><p class="muted">Alles om jouw volgende level te bereiken.</p></div></div>
+      <div class="feature-grid">
+        <button class="feature-card books-card" data-goto="books"><span class="feature-icon">📚</span><span class="feature-label">BOEKENZOEKER</span><strong>Vind je boek</strong><small>Zoek op titel of onderwerp.</small><span class="card-arrow">↗</span></button>
+        <button class="feature-card tutor-card" data-goto="tutor"><span class="feature-icon">🧠</span><span class="feature-label">AI-HUISWERKCOACH</span><strong>Snap het echt</strong><small>Uitleg, hints en voorbeelden.</small><span class="card-arrow">↗</span></button>
+        <button class="feature-card practice-card" data-goto="practice"><span class="feature-icon">🎯</span><span class="feature-label">TRAINING</span><strong>Test je kennis</strong><small>Een mini-quiz om te oefenen.</small><span class="card-arrow">↗</span></button>
+      </div>
+      <div class="bottom-grid"><div class="panel"><div class="panel-title"><h3>🏆 Jouw voortgang</h3><span class="soft-badge">BETA</span></div><div class="progress-row"><div><strong id="xpHome">0 XP</strong><small>Verzamel XP door te leren</small></div><div class="level-bubble" id="levelBubble">LVL 1</div></div><div class="progress-track"><div id="xpBar" style="width:0%"></div></div><small class="muted">Volgende level: 100 XP</small></div><div class="panel quote-panel"><div class="quote-emoji">💡</div><h3>Wist je dat?</h3><p>Je leert beter als je zelf probeert uit te leggen wat je net hebt ontdekt.</p></div></div>
+    </section>
+    <section id="booksTab" class="tab-panel hidden">
+      <div class="page-intro"><span class="big-icon purple">📚</span><div><h1>Boekenzoeker</h1><p>Zoek boeken en ontdek waar je meer over wilt leren.</p></div></div>
+      <form id="bookForm" class="search-bar"><span>🔎</span><input id="bookQuery" placeholder="Titel, auteur, ISBN of onderwerp..." required minlength="2"><button class="btn primary">Zoeken</button></form>
+      <p class="hint-line">Boekgegevens worden opgezocht via Open Library. Niet ieder Nederlands schoolboek is beschikbaar.</p><div id="bookMessage" class="muted"></div><div id="bookResults" class="book-grid"></div>
+    </section>
+    <section id="tutorTab" class="tab-panel hidden">
+      <div class="page-intro"><span class="big-icon pink">🧠</span><div><h1>AI-huiswerkcoach</h1><p>Geen stress. We pakken het stap voor stap aan.</p></div></div>
+      <div class="tutor-layout"><div class="chat-card"><div class="chat-header"><div class="bot-avatar">✦</div><div><strong>Nova, je leermaatje</strong><small><span class="online-dot"></span> Klaar om je te helpen</small></div><span class="chat-sparkle">✨</span></div>
+      <div class="chat-options"><label>Schoolniveau<select id="schoolLevel"><option>basisschool</option><option selected>middelbare school</option></select></label><label>Vak<select id="subject"><option>algemeen</option><option>wiskunde</option><option>Nederlands</option><option>Engels</option><option>geschiedenis</option><option>biologie</option><option>aardrijkskunde</option><option>natuurkunde</option><option>scheikunde</option></select></label></div>
+      <div class="mode-row"><button class="mode-btn active" data-mode="uitleg">💡 Leg uit</button><button class="mode-btn" data-mode="hint">🧩 Geef een hint</button><button class="mode-btn" data-mode="oefenen">🎯 Oefenen</button></div>
+      <div id="chatMessages" class="chat-messages"><div class="message bot"><div class="msg-avatar">🦊</div><div class="bubble">Hoi! 👋 Ik ben je huiswerkcoach. Waar loop je tegenaan? Ik help je het begrijpen, stap voor stap.</div></div></div>
+      <form id="chatForm" class="chat-compose"><textarea id="chatInput" rows="1" maxlength="4000" placeholder="Stel je vraag of vertel waar je vastloopt..." required></textarea><button class="send-btn" aria-label="Verstuur bericht">➤</button></form><div class="chat-foot">🛡️ Slim leren is belangrijker dan alleen het antwoord.</div></div>
+      <aside class="coach-side"><div class="panel coach-tip"><span class="tip-icon">🌈</span><h3>Pro-tip</h3><p>Vertel wat je al geprobeerd hebt. Dan kan ik je gerichter helpen.</p></div><div class="panel"><h3>✨ Snelle start</h3><button class="prompt-chip" data-prompt="Leg breuken uit met een makkelijk voorbeeld.">🍕 Leg breuken uit</button><button class="prompt-chip" data-prompt="Help me een Engelse woordjesquiz oefenen.">🇬🇧 Engelse woordjes</button><button class="prompt-chip" data-prompt="Leg uit hoe ik een tekst samenvat.">📝 Tekst samenvatten</button></div></aside></div>
+    </section>
+    <section id="practiceTab" class="tab-panel hidden">
+      <div class="page-intro"><span class="big-icon orange">🎯</span><div><h1>Mini-quiz</h1><p>Een snelle uitdaging. Elk goed antwoord levert XP op!</p></div></div>
+      <div class="quiz-card"><div class="quiz-top"><span class="soft-badge">LEVEL 1</span><span id="quizCount">VRAAG 1 VAN 5</span></div><div class="quiz-progress"><div id="quizBar"></div></div><div id="quizContent"></div><div id="quizFeedback" class="quiz-feedback"></div><button id="nextQuiz" class="btn primary full hidden">Volgende vraag →</button></div>
+    </section>
+    <footer>Gemaakt om slimmer te leren 💜 <span>StudyNova MVP · 0.1</span></footer>
+  </main>
+</div>
+<div id="toast" class="toast hidden"></div>
+<script src="/static/app.js"></script>
+</body></html>
