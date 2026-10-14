@@ -1,1 +1,427 @@
 
+:root {
+  color-scheme: dark;
+  --bg: #090b14;
+  --surface: #111525;
+  --raised: #171c30;
+  --hover: #222842;
+  --border: #292f49;
+  --text: #f4f5ff;
+  --muted: #969fba;
+  --purple: #a78bfa;
+  --purple-strong: #8257f5;
+  --cyan: #56dcff;
+  --green: #5ce6ad;
+  --yellow: #ffd66b;
+  --danger: #ff728b;
+  --radius: 18px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  min-height: 100%;
+  background: var(--bg);
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background:
+    radial-gradient(ellipse at 10% 0%, #33205a35, transparent 38rem),
+    radial-gradient(ellipse at 100% 20%, #073c5030, transparent 34rem),
+    var(--bg);
+  color: var(--text);
+  font-family: Inter, system-ui, -apple-system, sans-serif;
+  font-size: 15px;
+  line-height: 1.55;
+}
+
+button, input, select, textarea {
+  font: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+a {
+  color: var(--cyan);
+  text-decoration: none;
+}
+
+a:hover {
+  color: var(--purple);
+}
+
+h1, h2, h3, h4 {
+  color: var(--text);
+  line-height: 1.2;
+  letter-spacing: -0.035em;
+}
+
+p, small {
+  color: var(--muted);
+}
+
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible,
+a:focus-visible {
+  outline: 2px solid var(--cyan);
+  outline-offset: 3px;
+}
+
+hr {
+  border: 0;
+  border-top: 1px solid var(--border);
+}
+
+::selection {
+  color: white;
+  background: #8257f5;
+}
+
+
+/* Cards and panels */
+
+.card,
+.panel,
+.stat-card,
+.book-card,
+.quiz-card,
+.chat-card,
+.auth-card {
+  min-width: 0;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background: linear-gradient(145deg, #171c30, #101423);
+  box-shadow: 0 12px 40px #00000030;
+}
+
+.card, .panel {
+  padding: 22px;
+}
+
+/* Buttons */
+
+button,
+.btn,
+.button,
+input[type="submit"] {
+  min-height: 42px;
+  padding: 10px 16px;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  background: var(--raised);
+  color: var(--text);
+  font-weight: 650;
+  transition: 160ms ease;
+}
+
+button:hover,
+.btn:hover,
+.button:hover {
+  transform: translateY(-1px);
+  border-color: #7562ba;
+  background: var(--hover);
+}
+
+.primary,
+.primary-btn,
+.btn-primary,
+button[type="submit"],
+input[type="submit"] {
+  border-color: transparent;
+  background: linear-gradient(110deg, #8057f5, #a16bff);
+  color: white;
+  box-shadow: 0 5px 22px #8257f533;
+}
+
+.primary:hover,
+.primary-btn:hover,
+.btn-primary:hover,
+button[type="submit"]:hover,
+input[type="submit"]:hover {
+  background: linear-gradient(110deg, #946fff, #b184ff);
+}
+
+button:disabled {
+  cursor: not-allowed;
+  opacity: 0.55;
+  transform: none;
+}
+
+/* Inputs */
+
+input,
+select,
+textarea {
+  width: 100%;
+  min-width: 0;
+  padding: 12px 14px;
+  border: 1px solid #303752;
+  border-radius: 12px;
+  background: #0c1020;
+  color: var(--text);
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: #6f7895;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+  border-color: var(--purple);
+  outline: none;
+  box-shadow: 0 0 0 3px #a78bfa20;
+}
+
+label {
+  display: block;
+  margin-bottom: 7px;
+  color: #dce1f5;
+  font-weight: 600;
+}
+
+form {
+  display: grid;
+  gap: 14px;
+}
+
+/* Navigation */
+
+nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+nav button {
+  border-color: transparent;
+  background: transparent;
+  color: var(--muted);
+}
+
+nav button:hover {
+  border-color: var(--border);
+  background: var(--raised);
+  color: white;
+}
+
+/* Progress */
+
+progress {
+  width: 100%;
+  height: 9px;
+  overflow: hidden;
+  border: 0;
+  border-radius: 99px;
+  background: #292e48;
+}
+
+progress::-webkit-progress-bar {
+  background: #292e48;
+}
+
+progress::-webkit-progress-value {
+  border-radius: 99px;
+  background: linear-gradient(90deg, var(--purple-strong), var(--cyan));
+}
+
+progress::-moz-progress-bar {
+  background: linear-gradient(90deg, var(--purple-strong), var(--cyan));
+}
+
+
+/* Application layout */
+
+#appView {
+  width: 100%;
+  min-height: 100vh;
+}
+
+#appView > header,
+.app-header,
+.topbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 16px;
+  padding: 18px 26px;
+  border-bottom: 1px solid var(--border);
+  background: #0d1120e8;
+}
+
+#appView main,
+.main-content,
+.content {
+  width: 100%;
+  max-width: 1500px;
+  margin: 0 auto;
+  padding: clamp(18px, 3vw, 36px);
+}
+
+/* Login and registration */
+
+#authView {
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  padding: 24px;
+}
+
+#authView .auth-card {
+  width: 100%;
+  max-width: 460px;
+  padding: clamp(24px, 5vw, 42px);
+}
+
+#authView h1,
+#authView h2 {
+  margin-top: 0;
+}
+
+#authView button[type="submit"] {
+  width: 100%;
+}
+
+#authError,
+.error,
+.error-message {
+  color: var(--danger);
+}
+
+/* Books */
+
+#bookResults {
+  display: grid;
+  grid-template-columns:
+    repeat(auto-fit, minmax(min(100%, 230px), 1fr));
+  gap: 16px;
+  margin-top: 18px;
+}
+
+#bookResults > * {
+  min-width: 0;
+  padding: 18px;
+  overflow-wrap: anywhere;
+}
+
+#bookForm {
+  grid-template-columns:
+    repeat(auto-fit, minmax(min(100%, 180px), 1fr));
+  align-items: end;
+}
+
+/* AI Tutor */
+
+#chatMessages {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  min-height: 180px;
+  max-height: 55vh;
+  overflow-y: auto;
+  padding: 16px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background: #0b0f1c;
+}
+
+#chatMessages > * {
+  max-width: min(88%, 720px);
+  padding: 12px 15px;
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  overflow-wrap: anywhere;
+}
+
+#chatForm {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 10px;
+  align-items: end;
+  margin-top: 12px;
+}
+
+#chatInput {
+  resize: vertical;
+  min-height: 48px;
+}
+
+/* Feedback */
+
+#bookMessage,
+#quizFeedback,
+#authError {
+  overflow-wrap: anywhere;
+}
+
+#quizContent {
+  display: grid;
+  gap: 14px;
+}
+
+#quizContent button {
+  text-align: left;
+}
+
+#quizFeedback {
+  padding: 12px 14px;
+  border-radius: 12px;
+  background: var(--raised);
+}
+
+/* Mobile */
+
+@media (max-width: 700px) {
+  body {
+    font-size: 14px;
+  }
+
+  #appView > header,
+  .app-header,
+  .topbar {
+    padding: 14px 16px;
+  }
+
+  #appView main,
+  .main-content,
+  .content {
+    padding: 16px;
+  }
+
+  .card, .panel {
+    padding: 17px;
+  }
+
+  #chatForm {
+    grid-template-columns: 1fr;
+  }
+
+  #chatForm button {
+    width: 100%;
+  }
+
+  #authView {
+    padding: 16px;
+  }
+}
+
+/* Reduced motion accessibility */
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    scroll-behavior: auto !important;
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}
