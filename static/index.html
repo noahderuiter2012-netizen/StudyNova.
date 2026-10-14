@@ -11,7 +11,6 @@
 </head>
 <body>
 
-<!-- LOGIN EN REGISTRATIE -->
 <section id="authView">
   <div class="auth-layout">
     <div class="auth-intro">
@@ -22,15 +21,9 @@
           <div class="brand-subtitle">LEARN · PLAY · LEVEL UP</div>
         </div>
       </div>
-
       <p class="eyebrow">JOUW VOLGENDE AVONTUUR</p>
-      <h1 class="auth-title" id="authTitle">
-        Klaar om te <span>levelen?</span>
-      </h1>
-      <p id="authSubtitle">
-        Log in en maak van huiswerk een avontuur.
-      </p>
-
+      <h1 class="auth-title" id="authTitle">Klaar om te <span>levelen?</span></h1>
+      <p id="authSubtitle">Log in en maak van huiswerk een avontuur.</p>
       <div class="card" style="margin-top:20px">
         <div class="game-icon">🌌</div>
         <h3>Welkom in jouw leeruniversum</h3>
@@ -41,51 +34,28 @@
     <div class="auth-form-panel">
       <h2>Welkom terug!</h2>
       <p class="subtitle">Log in om verder te gaan met jouw avontuur.</p>
-
       <form id="authForm">
         <div class="form-group hidden" id="nameField">
           <label for="displayName">Jouw naam</label>
-          <input
-            id="displayName"
-            name="displayName"
-            type="text"
-            placeholder="Hoe mogen we je noemen?"
-            maxlength="60"
-            autocomplete="nickname"
-          >
+          <input id="displayName" name="displayName" type="text"
+            placeholder="Hoe mogen we je noemen?" maxlength="60"
+            autocomplete="nickname">
         </div>
-
         <div class="form-group">
           <label for="email">E-mailadres</label>
-          <input
-            id="email"
-            name="email"
-            type="email"
-            placeholder="jij@voorbeeld.nl"
-            autocomplete="email"
-            required
-          >
+          <input id="email" name="email" type="email"
+            placeholder="jij@voorbeeld.nl" autocomplete="email" required>
         </div>
-
         <div class="form-group">
           <label for="password">Wachtwoord</label>
-          <input
-            id="password"
-            name="password"
-            type="password"
-            placeholder="Jouw wachtwoord"
-            autocomplete="current-password"
-            required
-          >
+          <input id="password" name="password" type="password"
+            placeholder="Jouw wachtwoord" autocomplete="current-password" required>
         </div>
-
         <p id="authError" class="error-message" role="alert"></p>
-
         <button id="authSubmit" class="btn primary full-width" type="submit">
           🚀 Inloggen
         </button>
       </form>
-
       <p class="auth-switch">
         <span id="switchText">Nog geen account?</span>
         <button id="switchAuth" type="button">Maak er een!</button>
@@ -94,10 +64,7 @@
   </div>
 </section>
 
-<!-- HOOFDAPP -->
 <div id="appView" class="app-shell hidden">
-
-  <!-- SIDEBAR -->
   <aside class="sidebar">
     <div class="brand">
       <div class="brand-icon">🚀</div>
@@ -108,10 +75,12 @@
     </div>
 
     <p class="nav-heading">JOUW UNIVERSUM</p>
-
     <nav class="main-nav" aria-label="Hoofdnavigatie">
       <button class="nav-item active" data-tab="home" type="button">
         <span class="nav-icon">🏠</span> Dashboard
+      </button>
+      <button class="nav-item" data-tab="learn" type="button">
+        <span class="nav-icon">🧭</span> Leeromgeving
       </button>
       <button class="nav-item" data-tab="books" type="button">
         <span class="nav-icon">📚</span> Boekenzoeker
@@ -125,11 +94,9 @@
     </nav>
 
     <p class="nav-heading">QUEST WORLD</p>
-
     <nav class="main-nav" aria-label="Gamefuncties">
       <button class="nav-item" data-tab="quests" type="button">
-        <span class="nav-icon">⚔️</span> Quests
-        <span class="nav-tag">XP</span>
+        <span class="nav-icon">⚔️</span> Quests <span class="nav-tag">XP</span>
       </button>
       <button class="nav-item" data-tab="world" type="button">
         <span class="nav-icon">🌌</span> World
@@ -153,13 +120,10 @@
           <div id="sidebarLevel" class="profile-level">Level 1 · Beginner</div>
         </div>
       </div>
-      <button id="logoutBtn" class="btn ghost" type="button">
-        ↪ Uitloggen
-      </button>
+      <button id="logoutBtn" class="btn ghost" type="button">↪ Uitloggen</button>
     </div>
   </aside>
 
-  <!-- HOOFDINHOUD -->
   <main class="main-content">
     <header class="topbar">
       <div>
@@ -167,19 +131,15 @@
         <h1 id="pageTitle">Jouw leeruniversum</h1>
         <p>Leer iets nieuws. Verdien XP. Level up.</p>
       </div>
-
       <div class="topbar-stats">
         <div class="xp-pill">
-          <span>✨</span>
-          <strong id="xpTop">0</strong>
-          <span>XP</span>
+          <span>✨</span><strong id="xpTop">0</strong><span>XP</span>
         </div>
       </div>
     </header>
 
     <div class="content-area">
 
-      
       <!-- DASHBOARD -->
       <section id="homeTab" class="tab-panel">
         <div class="xp-panel">
@@ -192,13 +152,11 @@
             </div>
             <div id="levelBubble" class="level-bubble">LVL 1</div>
           </div>
-
           <div class="xp-track">
             <div id="xpBar" class="xp-fill" style="width:0%"></div>
           </div>
           <div class="xp-meta">
-            <span>Levelprogressie</span>
-            <span>Blijf leren!</span>
+            <span>Levelprogressie</span><span>Blijf leren!</span>
           </div>
         </div>
 
@@ -211,23 +169,21 @@
 
         <div class="card-grid">
           <article class="game-card">
+            <div class="game-icon">🧭</div>
+            <h3>Leeromgeving</h3>
+            <p>Kies een schoolvak, lees lessen en oefen je kennis.</p>
+            <button class="btn primary" type="button" data-goto="learn">
+              Begin met leren →
+            </button>
+          </article>
+          <article class="game-card accent-purple">
             <div class="game-icon">🧠</div>
             <h3>AI-huiswerkcoach</h3>
             <p>Krijg uitleg, hints en hulp bij schoolvakken.</p>
             <button class="btn primary" type="button" data-goto="tutor">
-              Start leren →
+              Stel een vraag →
             </button>
           </article>
-
-          <article class="game-card accent-purple">
-            <div class="game-icon">📚</div>
-            <h3>Boekenzoeker</h3>
-            <p>Zoek boeken en ontdek meer over de inhoud.</p>
-            <button class="btn secondary" type="button" data-goto="books">
-              Zoek boeken →
-            </button>
-          </article>
-
           <article class="game-card accent-pink">
             <div class="game-icon">🎯</div>
             <h3>Oefenarena</h3>
@@ -236,7 +192,6 @@
               Start quiz →
             </button>
           </article>
-
           <article class="game-card accent-green">
             <div class="game-icon">⚔️</div>
             <h3>Quests</h3>
@@ -248,24 +203,189 @@
         </div>
       </section>
 
+
+      <!-- LEEROMGEVING -->
+      <section id="learnTab" class="tab-panel hidden">
+        <div class="learning-hero">
+          <div>
+            <p class="eyebrow">JOUW PERSOONLIJKE LEERROUTE</p>
+            <h2>📚 Ontdek. Begrijp. Beheers.</h2>
+            <p>Kies een vak, leer stap voor stap en test wat je hebt onthouden.</p>
+            <div class="xp-pill" style="margin-top:16px;width:max-content">
+              <span>✨</span><strong id="learnXp">0 XP</strong>
+            </div>
+          </div>
+          <div class="hero-icon" aria-hidden="true">🧭</div>
+        </div>
+
+        <div class="learning-controls">
+          <div class="form-group">
+            <label for="learnLevel">Jouw schoolniveau</label>
+            <select id="learnLevel">
+              <option value="basisschool">Basisschool</option>
+              <option value="vmbo">VMBO</option>
+              <option value="havo">HAVO</option>
+              <option value="vwo">VWO</option>
+              <option value="mbo">MBO</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="learnGrade">Groep of leerjaar</label>
+            <select id="learnGrade">
+              <option value="3">Groep 3</option>
+              <option value="4">Groep 4</option>
+              <option value="5">Groep 5</option>
+              <option value="6" selected>Groep 6</option>
+              <option value="7">Groep 7</option>
+              <option value="8">Groep 8</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label>Jouw leerroute</label>
+            <p class="muted">De lessen hieronder zijn het startpunt. Je kunt daarna de AI-coach om extra uitleg vragen.</p>
+          </div>
+        </div>
+
+        <div class="section-heading">
+          <div>
+            <h2>Kies een schoolvak</h2>
+            <p>Open een les om uitleg en voorbeelden te bekijken.</p>
+          </div>
+        </div>
+
+        <div class="subject-grid">
+          <button class="subject-card" type="button" data-subject="Wiskunde">
+            <span class="subject-icon">➗</span>
+            <h3>Wiskunde</h3>
+            <p>Rekenen, vermenigvuldigen en breuken.</p>
+            <span class="subject-arrow">→</span>
+          </button>
+          <button class="subject-card" type="button" data-subject="Nederlands">
+            <span class="subject-icon">📝</span>
+            <h3>Nederlands</h3>
+            <p>Grammatica en taalvaardigheid.</p>
+            <span class="subject-arrow">→</span>
+          </button>
+          <button class="subject-card" type="button" data-subject="Engels">
+            <span class="subject-icon">🇬🇧</span>
+            <h3>Engels</h3>
+            <p>Woorden en eenvoudige zinnen.</p>
+            <span class="subject-arrow">→</span>
+          </button>
+          <button class="subject-card" type="button" data-subject="Biologie">
+            <span class="subject-icon">🌱</span>
+            <h3>Biologie</h3>
+            <p>De natuur en fotosynthese.</p>
+            <span class="subject-arrow">→</span>
+          </button>
+          <button class="subject-card" type="button" data-subject="Geschiedenis">
+            <span class="subject-icon">🏛️</span>
+            <h3>Geschiedenis</h3>
+            <p>Gebeurtenissen, tijdlijnen en bronnen.</p>
+            <span class="subject-arrow">→</span>
+          </button>
+          <button class="subject-card" type="button" data-subject="Aardrijkskunde">
+            <span class="subject-icon">🌍</span>
+            <h3>Aardrijkskunde</h3>
+            <p>Kaarten en windrichtingen.</p>
+            <span class="subject-arrow">→</span>
+          </button>
+        </div>
+
+        <section id="lessonLibrary" class="card hidden" aria-labelledby="selectedSubjectTitle">
+          <div class="section-heading" style="margin-top:0">
+            <div>
+              <p class="eyebrow">LESSENBIBLIOTHEEK</p>
+              <h2 id="selectedSubjectTitle">Kies een vak</h2>
+              <p class="muted">Selecteer een les om te beginnen.</p>
+            </div>
+            <button class="btn ghost" type="button" data-back-to-subjects>
+              ← Alle vakken
+            </button>
+          </div>
+          <div id="lessonList"></div>
+        </section>
+
+        <section id="lessonViewer" class="card hidden" aria-labelledby="lessonTitle">
+          <p id="lessonSubjectLabel">Vak · niveau · leerjaar</p>
+          <h2 id="lessonTitle">Les</h2>
+
+          <div class="lesson-content-block">
+            <h3>🎯 Wat ga je leren?</h3>
+            <p id="lessonIntroduction"></p>
+          </div>
+          <div class="lesson-content-block">
+            <h3>💡 Uitleg</h3>
+            <p id="lessonExplanation"></p>
+          </div>
+          <div class="lesson-content-block">
+            <h3>🧪 Voorbeeld</h3>
+            <p id="lessonExample"></p>
+          </div>
+
+          <div class="lesson-actions">
+            <button class="btn ghost" type="button" data-back-to-subjects>
+              ← Alle vakken
+            </button>
+            <button id="startLessonPractice" class="btn primary" type="button">
+              🎯 Oefenvragen starten
+            </button>
+            <button id="askLessonAI" class="btn secondary" type="button">
+              🧠 Vraag de AI-coach
+            </button>
+          </div>
+        </section>
+
+        <section id="lessonExercise" class="card hidden" aria-labelledby="exerciseQuestion">
+          <div class="section-heading" style="margin-top:0">
+            <div>
+              <p class="eyebrow">KENNIS CHECKEN</p>
+              <h2>🎯 Oefenronde</h2>
+            </div>
+            <span id="exerciseCounter" class="tag">Vraag 1</span>
+          </div>
+          <p id="exerciseScore" class="muted">Score: 0</p>
+          <h3 id="exerciseQuestion">Klaar voor de eerste vraag?</h3>
+          <div id="exerciseAnswers"></div>
+          <p id="exerciseFeedback" aria-live="polite"></p>
+          <button id="nextExercise" class="btn primary hidden" type="button">
+            Volgende vraag →
+          </button>
+          <div id="exerciseComplete" class="hidden">
+            <h3>🏆 Goed gewerkt!</h3>
+            <p id="exerciseSummary"></p>
+            <div class="lesson-actions">
+              <button id="retryExercise" class="btn secondary" type="button">
+                Opnieuw oefenen
+              </button>
+              <button id="backToLesson" class="btn primary" type="button">
+                Terug naar de les
+              </button>
+            </div>
+          </div>
+        </section>
+
+        <div class="card" id="openLearningAI">
+          <h3>🧠 Meer uitleg nodig?</h3>
+          <p class="muted">Vraag de AI-huiswerkcoach om een andere uitleg, extra voorbeelden of een nieuwe oefenvraag.</p>
+          <button class="btn secondary" id="openLearningAIButton" type="button">
+            Open AI-huiswerkcoach →
+          </button>
+        </div>
+      </section>
+
       <!-- BOEKENZOEKER -->
       <section id="booksTab" class="tab-panel hidden">
         <div class="card">
           <p class="eyebrow">ONTDEK EN LEER</p>
           <h2>📚 Boekenzoeker</h2>
           <p class="muted">Zoek op boektitel of onderwerp.</p>
-
           <form id="bookForm">
-            <input
-              id="bookQuery"
-              type="search"
+            <input id="bookQuery" type="search"
               placeholder="Bijvoorbeeld: biologie of Harry Potter"
-              minlength="2"
-              required
-            >
+              minlength="2" required>
             <button class="btn primary" type="submit">🔎 Zoeken</button>
           </form>
-
           <p id="bookMessage" role="status"></p>
           <div id="bookResults"></div>
         </div>
@@ -290,7 +410,6 @@
                 <option value="anders">Anders</option>
               </select>
             </div>
-
             <div class="form-group">
               <label for="subject">Schoolvak</label>
               <select id="subject">
@@ -308,15 +427,9 @@
           </div>
 
           <div class="form-actions">
-            <button class="btn secondary mode-btn active" data-mode="uitleg" type="button">
-              💡 Uitleg
-            </button>
-            <button class="btn secondary mode-btn" data-mode="hint" type="button">
-              🧩 Hint
-            </button>
-            <button class="btn secondary mode-btn" data-mode="oefenen" type="button">
-              🎯 Oefenen
-            </button>
+            <button class="btn secondary mode-btn active" data-mode="uitleg" type="button">💡 Uitleg</button>
+            <button class="btn secondary mode-btn" data-mode="hint" type="button">🧩 Hint</button>
+            <button class="btn secondary mode-btn" data-mode="oefenen" type="button">🎯 Oefenen</button>
           </div>
         </div>
 
@@ -325,48 +438,27 @@
             <h3>StudyNova Tutor</h3>
             <p>Stel gerust je vraag. We leren stap voor stap.</p>
           </div>
-
           <div id="chatMessages" aria-live="polite">
             <div class="message bot">
               <div class="msg-avatar">🦊</div>
-              <div class="bubble">
-                Hoi! 👋 Waar wil je vandaag aan werken? Ik kan je helpen met uitleg, hints en oefenen.
-              </div>
+              <div class="bubble">Hoi! 👋 Waar wil je vandaag aan werken? Ik kan je helpen met uitleg, hints en oefenen.</div>
             </div>
           </div>
-
           <form id="chatForm">
-            <input
-              id="chatInput"
-              type="text"
-              placeholder="Stel je huiswerkvraag..."
-              maxlength="4000"
-              required
-            >
+            <input id="chatInput" type="text" placeholder="Stel je huiswerkvraag..."
+              maxlength="4000" required>
             <button class="btn primary" type="submit">Verstuur ➤</button>
           </form>
         </div>
 
         <div class="section-heading">
-          <div>
-            <h2>Snelle vragen</h2>
-            <p>Klik om een vraag in te vullen.</p>
-          </div>
+          <div><h2>Snelle vragen</h2><p>Klik om een vraag in te vullen.</p></div>
         </div>
-
         <div class="card-grid">
-          <button class="prompt-chip" type="button" data-prompt="Leg breuken stap voor stap uit.">
-            ➗ Leg breuken uit
-          </button>
-          <button class="prompt-chip" type="button" data-prompt="Help me een goede samenvatting te maken.">
-            📝 Help met samenvatten
-          </button>
-          <button class="prompt-chip" type="button" data-prompt="Geef me vijf Engelse oefenzinnen.">
-            🇬🇧 Engels oefenen
-          </button>
-          <button class="prompt-chip" type="button" data-prompt="Maak een oefenvraag en geef eerst een hint.">
-            🧩 Geef me een hint
-          </button>
+          <button class="prompt-chip" type="button" data-prompt="Leg breuken stap voor stap uit.">➗ Leg breuken uit</button>
+          <button class="prompt-chip" type="button" data-prompt="Help me een goede samenvatting te maken.">📝 Help met samenvatten</button>
+          <button class="prompt-chip" type="button" data-prompt="Geef me vijf Engelse oefenzinnen.">🇬🇧 Engels oefenen</button>
+          <button class="prompt-chip" type="button" data-prompt="Maak een oefenvraag en geef eerst een hint.">🧩 Geef me een hint</button>
         </div>
       </section>
 
@@ -376,24 +468,18 @@
           <p class="eyebrow">KENNIS CHALLENGE</p>
           <h2>🎯 Oefenarena</h2>
           <p class="muted">Beantwoord de vragen en verdien XP.</p>
-
           <div class="quiz-top">
-            <span id="quizCount">VRAAG 1</span>
-            <span>✨ XP verdienen</span>
+            <span id="quizCount">VRAAG 1</span><span>✨ XP verdienen</span>
           </div>
-
           <div class="progress-track">
             <div id="quizBar" class="progress-fill" style="width:0%"></div>
           </div>
-
           <div id="quizContent"></div>
           <p id="quizFeedback" aria-live="polite"></p>
-
-          <button id="nextQuiz" class="btn primary hidden" type="button">
-            Volgende vraag →
-          </button>
+          <button id="nextQuiz" class="btn primary hidden" type="button">Volgende vraag →</button>
         </div>
       </section>
+
 
       
       <!-- QUESTS -->
@@ -401,36 +487,27 @@
         <p class="eyebrow">MISSIES EN UITDAGINGEN</p>
         <h2>⚔️ Quests</h2>
         <p class="muted">Werk stap voor stap aan je leerdoelen.</p>
-
         <div class="card-grid">
           <article class="quest-card">
             <div class="game-icon">🧠</div>
             <h3>Brain Training</h3>
             <p>Stel een vraag aan je AI-huiswerkcoach.</p>
             <span class="tag">Beloning: 5 XP per vraag</span>
-            <button class="btn primary" data-goto="tutor" type="button">
-              Begin quest →
-            </button>
+            <button class="btn primary" data-goto="tutor" type="button">Begin quest →</button>
           </article>
-
           <article class="quest-card">
             <div class="game-icon">🎯</div>
             <h3>Quiz Challenger</h3>
             <p>Test je kennis met een korte quiz.</p>
             <span class="tag">Beloning bij goed antwoord</span>
-            <button class="btn primary" data-goto="practice" type="button">
-              Begin quest →
-            </button>
+            <button class="btn primary" data-goto="practice" type="button">Begin quest →</button>
           </article>
-
           <article class="quest-card">
             <div class="game-icon">📚</div>
             <h3>Knowledge Hunter</h3>
             <p>Zoek een boek of onderwerp om te ontdekken.</p>
             <span class="tag">Ontdek iets nieuws</span>
-            <button class="btn primary" data-goto="books" type="button">
-              Begin quest →
-            </button>
+            <button class="btn primary" data-goto="books" type="button">Begin quest →</button>
           </article>
         </div>
       </section>
@@ -439,34 +516,24 @@
       <section id="worldTab" class="tab-panel hidden">
         <p class="eyebrow">JOUW PLEK IN HET UNIVERSUM</p>
         <h2>🌌 Quest World</h2>
-
         <div class="xp-panel">
           <div class="game-icon">🪐</div>
           <h2>Welkom in jouw wereld</h2>
           <p>Je XP en level laten zien hoeveel je al hebt geleerd.</p>
-          <div class="xp-track">
-            <div class="xp-fill" id="worldXpBar" style="width:0%"></div>
-          </div>
+          <div class="xp-track"><div class="xp-fill" id="worldXpBar" style="width:0%"></div></div>
           <p id="worldLevelText">Level 1 — jouw avontuur begint hier.</p>
         </div>
-
         <div class="section-heading">
-          <div>
-            <h2>Gebieden om te ontdekken</h2>
-            <p>Meer gebieden en uitdagingen kunnen later worden toegevoegd.</p>
-          </div>
+          <div><h2>Gebieden om te ontdekken</h2><p>Meer gebieden en uitdagingen kunnen later worden toegevoegd.</p></div>
         </div>
-
         <div class="card-grid">
           <article class="game-card">
-            <div class="game-icon">📖</div>
-            <h3>Knowledge Forest</h3>
+            <div class="game-icon">📖</div><h3>Knowledge Forest</h3>
             <p>Ontdek nieuwe onderwerpen.</p>
             <button class="btn secondary" data-goto="books" type="button">Ontdekken →</button>
           </article>
           <article class="game-card accent-purple">
-            <div class="game-icon">🧠</div>
-            <h3>Brain Academy</h3>
+            <div class="game-icon">🧠</div><h3>Brain Academy</h3>
             <p>Train je kennis en vaardigheden.</p>
             <button class="btn secondary" data-goto="tutor" type="button">Leren →</button>
           </article>
@@ -478,32 +545,11 @@
         <p class="eyebrow">JOUW PRESTATIES</p>
         <h2>🏆 Badges</h2>
         <p class="muted">Een overzicht van mogelijke prestaties in StudyNova.</p>
-
         <div class="card-grid">
-          <article class="card">
-            <div class="game-icon">🚀</div>
-            <h3>First Steps</h3>
-            <p>Begin je StudyNova-avontuur.</p>
-            <span class="tag">Startbadge</span>
-          </article>
-          <article class="card">
-            <div class="game-icon">🧠</div>
-            <h3>Brain Power</h3>
-            <p>Blijf oefenen en nieuwe dingen leren.</p>
-            <span class="tag">Leerbadge</span>
-          </article>
-          <article class="card">
-            <div class="game-icon">🔥</div>
-            <h3>Consistency</h3>
-            <p>Kom regelmatig terug om te oefenen.</p>
-            <span class="tag">Volharding</span>
-          </article>
-          <article class="card">
-            <div class="game-icon">⭐</div>
-            <h3>XP Hunter</h3>
-            <p>Verdien XP door StudyNova te gebruiken.</p>
-            <span class="tag">XP-badge</span>
-          </article>
+          <article class="card"><div class="game-icon">🚀</div><h3>First Steps</h3><p>Begin je StudyNova-avontuur.</p><span class="tag">Startbadge</span></article>
+          <article class="card"><div class="game-icon">🧠</div><h3>Brain Power</h3><p>Blijf oefenen en nieuwe dingen leren.</p><span class="tag">Leerbadge</span></article>
+          <article class="card"><div class="game-icon">🔥</div><h3>Consistency</h3><p>Kom regelmatig terug om te oefenen.</p><span class="tag">Volharding</span></article>
+          <article class="card"><div class="game-icon">⭐</div><h3>XP Hunter</h3><p>Verdien XP door StudyNova te gebruiken.</p><span class="tag">XP-badge</span></article>
         </div>
       </section>
 
@@ -512,32 +558,15 @@
         <p class="eyebrow">GEEF JE PROGRESSIE EEN BOOST</p>
         <h2>🛍️ XP Shop</h2>
         <p class="muted">De winkel is een visuele preview. XP uitgeven en items bewaren moeten nog worden gebouwd.</p>
-
         <div class="xp-panel">
-          <h3>Jouw saldo</h3>
-          <p><strong id="shopXp">0 XP</strong></p>
+          <h3>Jouw saldo</h3><p><strong id="shopXp">0 XP</strong></p>
         </div>
-
         <div class="section-heading">
-          <div>
-            <h2>Shopitems</h2>
-            <p>Voorbeelditems voor toekomstige beloningen.</p>
-          </div>
+          <div><h2>Shopitems</h2><p>Voorbeelditems voor toekomstige beloningen.</p></div>
         </div>
-
         <div class="card-grid">
-          <article class="game-card">
-            <div class="game-icon">🎨</div>
-            <h3>Orb-kleur</h3>
-            <p>Een alternatieve kleur voor jouw profiel.</p>
-            <span class="tag">100 XP</span>
-          </article>
-          <article class="game-card accent-purple">
-            <div class="game-icon">✨</div>
-            <h3>Speciale titel</h3>
-            <p>Een speciale titel voor jouw profiel.</p>
-            <span class="tag">250 XP</span>
-          </article>
+          <article class="game-card"><div class="game-icon">🎨</div><h3>Orb-kleur</h3><p>Een alternatieve kleur voor jouw profiel.</p><span class="tag">100 XP</span></article>
+          <article class="game-card accent-purple"><div class="game-icon">✨</div><h3>Speciale titel</h3><p>Een speciale titel voor jouw profiel.</p><span class="tag">250 XP</span></article>
         </div>
       </section>
 
@@ -545,7 +574,6 @@
       <section id="friendsTab" class="tab-panel hidden">
         <p class="eyebrow">SAMEN LEVELEN</p>
         <h2>👥 Friends</h2>
-
         <div class="card">
           <div class="game-icon">🤝</div>
           <h3>Leer samen</h3>
@@ -556,14 +584,26 @@
 
     </div>
 
-    <footer>
-      StudyNova · Learn · Play · Level Up 🚀
-    </footer>
+    <footer>StudyNova · Learn · Play · Level Up 🚀</footer>
   </main>
 </div>
 
 <div id="toast" class="hidden" role="status" aria-live="polite"></div>
 
 <script src="/static/app.js"></script>
+<script>
+  // Teruggaan naar de vakselectie vanuit de lessenbibliotheek of les.
+  document.querySelectorAll("[data-back-to-subjects]").forEach(button => {
+    button.addEventListener("click", () => {
+      ["lessonLibrary", "lessonViewer", "lessonExercise"].forEach(id => {
+        const panel = document.getElementById(id);
+        if (panel) panel.classList.add("hidden");
+      });
+
+      const subjects = document.querySelector("#learnTab .subject-grid");
+      if (subjects) subjects.classList.remove("hidden");
+    });
+  });
+</script>
 </body>
 </html>
