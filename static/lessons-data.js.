@@ -1,0 +1,219 @@
+
+"use strict";
+
+// StudyNova — lessen voor basis- en middelbare school.
+// levels bepaalt voor welke schoolniveaus een les zichtbaar is.
+window.studyNovaLessons = {
+  "Wiskunde": [
+    {
+      title: "Tafels en vermenigvuldigen",
+      duration: "6 minuten",
+      levels: ["basisschool"],
+      introduction: "Je leert gelijke groepen sneller optellen met vermenigvuldigen.",
+      explanation: "Bij 4 × 6 zijn er vier groepen met elk zes voorwerpen. Je rekent 6 + 6 + 6 + 6 = 24. De volgorde van de factoren verandert het antwoord niet: 4 × 6 = 6 × 4.",
+      example: "Een doos bevat 8 potloden. Hoeveel potloden zitten in 5 dozen? Reken 5 × 8 = 40.",
+      exercises: [
+        { q: "Hoeveel is 7 × 6?", a: ["36", "42", "48", "56"], correct: 1, why: "7 × 6 = 42. Je kunt 7 × 3 = 21 nemen en dat verdubbelen." },
+        { q: "Er zijn 4 teams met elk 9 leerlingen. Hoeveel leerlingen zijn dat?", a: ["13", "27", "36", "49"], correct: 2, why: "Vier groepen van negen is 4 × 9 = 36." },
+        { q: "Welke som heeft dezelfde uitkomst als 3 × 8?", a: ["3 + 8", "8 + 8 + 8", "3 + 3 + 3", "8 × 8"], correct: 1, why: "Drie groepen van acht is 8 + 8 + 8 = 24." }
+      ]
+    },
+    {
+      title: "Breuken en vereenvoudigen",
+      duration: "7 minuten",
+      levels: ["basisschool", "vmbo", "havo", "vwo", "mbo"],
+      introduction: "Een breuk geeft aan hoeveel gelijke delen je van een geheel neemt.",
+      explanation: "De teller staat boven de breukstreep en vertelt hoeveel delen je neemt. De noemer staat eronder en vertelt in hoeveel gelijke delen het geheel is verdeeld. Je vereenvoudigt een breuk door teller en noemer door hetzelfde getal te delen.",
+      example: "2/4 = 1/2, want 2 en 4 kun je allebei door 2 delen. De waarde van de breuk blijft gelijk.",
+      exercises: [
+        { q: "Welke breuk is gelijk aan 3/6?", a: ["1/3", "1/2", "2/3", "3/5"], correct: 1, why: "Deel teller en noemer door 3: 3/6 = 1/2." },
+        { q: "In 5/8 is de noemer…", a: ["5", "8", "13", "40"], correct: 1, why: "De noemer is het getal onder de breukstreep: 8." },
+        { q: "Je eet 3 van de 12 gelijke pizzapunten. Welke breuk eet je, vereenvoudigd?", a: ["1/4", "1/3", "3/4", "1/12"], correct: 0, why: "3/12 vereenvoudigt door teller en noemer door 3 te delen: 1/4." }
+      ]
+    },
+    {
+      title: "Negatieve getallen",
+      duration: "7 minuten",
+      levels: ["vmbo", "havo", "vwo", "mbo"],
+      introduction: "Negatieve getallen liggen onder nul, bijvoorbeeld bij temperaturen onder het vriespunt.",
+      explanation: "Op een getallenlijn liggen grotere getallen verder naar rechts. Daarom is −2 groter dan −5. Bij optellen van een negatief getal ga je naar links; bij aftrekken van een negatief getal ga je naar rechts.",
+      example: "−3 + 5 = 2. Vanaf −3 ga je vijf stappen naar rechts.",
+      exercises: [
+        { q: "Welk getal is het grootst?", a: ["−7", "−2", "−9", "−5"], correct: 1, why: "−2 ligt het verst naar rechts en is daarom het grootste getal." },
+        { q: "Hoeveel is −4 + 7?", a: ["−11", "−3", "3", "11"], correct: 2, why: "Vanaf −4 zeven stappen naar rechts brengt je op 3." },
+        { q: "Hoeveel is 3 − (−2)?", a: ["1", "−1", "5", "−5"], correct: 2, why: "Aftrekken van een negatief getal is optellen: 3 + 2 = 5." }
+      ]
+    },
+    {
+      title: "Vergelijkingen oplossen",
+      duration: "8 minuten",
+      levels: ["vmbo", "havo", "vwo", "mbo"],
+      introduction: "Een vergelijking is een rekensom met een onbekend getal, vaak aangeduid met x.",
+      explanation: "Wat je aan de ene kant van het gelijkteken doet, moet je ook aan de andere kant doen. Zo houd je de vergelijking in balans. Bij x + 4 = 11 trek je aan beide kanten 4 af.",
+      example: "x + 4 = 11 → x = 11 − 4 → x = 7. Controle: 7 + 4 = 11.",
+      exercises: [
+        { q: "Los op: x + 6 = 14.", a: ["6", "8", "20", "−8"], correct: 1, why: "Trek 6 van beide kanten af: x = 14 − 6 = 8." },
+        { q: "Los op: 3x = 21.", a: ["7", "18", "24", "63"], correct: 0, why: "Deel beide kanten door 3: x = 21 ÷ 3 = 7." },
+        { q: "Los op: 2x + 5 = 17.", a: ["5", "6", "11", "12"], correct: 1, why: "Trek 5 af: 2x = 12. Deel daarna door 2: x = 6." }
+      ]
+    }
+  ],
+
+  "Nederlands": [
+    {
+      title: "Zelfstandige naamwoorden",
+      duration: "6 minuten",
+      levels: ["basisschool"],
+      introduction: "Zelfstandige naamwoorden benoemen mensen, dieren, dingen of plaatsen.",
+      explanation: "Je kunt er vaak de, het of een voor zetten: de leerling, het huis, een park. Een werkwoord beschrijft vaak wat iemand doet.",
+      example: "In 'De kleine hond rent' is hond het zelfstandig naamwoord, kleine het bijvoeglijk naamwoord en rent het werkwoord.",
+      exercises: [
+        { q: "Welk woord is een zelfstandig naamwoord?", a: ["rennen", "vrolijk", "fiets", "snel"], correct: 2, why: "Een fiets is een ding en dus een zelfstandig naamwoord." },
+        { q: "Wat is het werkwoord in 'De vogels zingen buiten'?", a: ["vogels", "zingen", "buiten", "de"], correct: 1, why: "Zingen geeft aan wat de vogels doen." },
+        { q: "Welk lidwoord past: ___ meisje leest?", a: ["De", "Het", "Eenige", "Geen"], correct: 1, why: "Meisje is een het-woord: het meisje." }
+      ]
+    },
+    {
+      title: "Werkwoordspelling",
+      duration: "7 minuten",
+      levels: ["basisschool", "vmbo", "havo", "vwo", "mbo"],
+      introduction: "De juiste werkwoordsvorm hangt af van het onderwerp en de tijd.",
+      explanation: "In de tegenwoordige tijd gebruik je bij ik meestal de stam: ik werk. Bij jij, hij, zij en het komt meestal stam + t: jij werkt, hij werkt. Bij wij, jullie en zij gebruik je vaak het hele werkwoord: wij werken.",
+      example: "Stam van fietsen is fiets. Ik fiets, jij fietst, wij fietsen. Bij 'loop jij?' vervalt de t omdat jij achter het werkwoord staat.",
+      exercises: [
+        { q: "Vul in: Hij ___ elke dag naar school. (fietsen)", a: ["fiets", "fietst", "fietsen", "fietste"], correct: 1, why: "Bij hij gebruik je meestal stam + t: hij fietst." },
+        { q: "Welke zin is juist?", a: ["Ik loopt snel.", "Wij loopt snel.", "Jij loopt snel.", "Zij loop snel."], correct: 2, why: "Bij jij vóór het werkwoord gebruik je loop + t: jij loopt." },
+        { q: "Vul in: ___ jij morgen mee? (lopen)", a: ["Loopt", "Loop", "Lopen", "Geloop"], correct: 1, why: "Bij een vraag met jij achter het werkwoord vervalt de t: loop jij?" }
+      ]
+    },
+    {
+      title: "Zinsontleding",
+      duration: "8 minuten",
+      levels: ["vmbo", "havo", "vwo", "mbo"],
+      introduction: "Met zinsontleding ontdek je wie iets doet en welk werkwoord bij de zin hoort.",
+      explanation: "De persoonsvorm verandert als je de zin in een andere tijd zet of het onderwerp verandert. Het onderwerp is wie of wat bij de persoonsvorm hoort. Vraag bijvoorbeeld: wie of wat + persoonsvorm?",
+      example: "'De leerling maakt huiswerk.' Persoonsvorm: maakt. Onderwerp: de leerling. Verleden tijd: de leerling maakte huiswerk.",
+      exercises: [
+        { q: "Wat is de persoonsvorm in 'Morgen speelt Noor buiten'?", a: ["Morgen", "speelt", "Noor", "buiten"], correct: 1, why: "Verander de tijd: 'Morgen speelde Noor buiten.' Speelt verandert, dus dat is de persoonsvorm." },
+        { q: "Wat is het onderwerp in 'De hond blaft hard'?", a: ["De hond", "blaft", "hard", "De"], correct: 0, why: "Wie blaft? De hond." },
+        { q: "Welke zin staat in de verleden tijd?", a: ["Ik leer Nederlands.", "Wij spelen buiten.", "Zij fietste naar huis.", "Hij maakt een som."], correct: 2, why: "Fietste is de verleden tijd van fietsen." }
+      ]
+    }
+  ],
+
+  "Engels": [
+    {
+      title: "Everyday English",
+      duration: "6 minuten",
+      levels: ["basisschool"],
+      introduction: "Met korte Engelse zinnen kun je iemand begroeten en informatie vragen.",
+      explanation: "'What is your name?' vraagt naar iemands naam. 'How are you?' betekent 'Hoe gaat het?'. Een kort antwoord kan zijn: 'I'm fine, thank you.'",
+      example: "A: Hello! What is your name? B: My name is Alex. A: How are you? B: I'm fine, thanks.",
+      exercises: [
+        { q: "Wat betekent 'How are you?'", a: ["Hoe heet je?", "Hoe gaat het?", "Waar woon je?", "Hoe oud ben je?"], correct: 1, why: "'How are you?' betekent 'Hoe gaat het met je?'." },
+        { q: "Welke zin vraagt naar iemands naam?", a: ["Where are you?", "How old are you?", "What is your name?", "Good morning."], correct: 2, why: "'What is your name?' vraagt naar de naam." },
+        { q: "Wat betekent 'Thank you'?", a: ["Alsjeblieft", "Dank je wel", "Tot morgen", "Goedemorgen"], correct: 1, why: "'Thank you' betekent 'Dank je wel'." }
+      ]
+    },
+    {
+      title: "Present simple en present continuous",
+      duration: "8 minuten",
+      levels: ["vmbo", "havo", "vwo", "mbo"],
+      introduction: "Engels gebruikt verschillende werkwoordsvormen voor gewoontes en dingen die nu gebeuren.",
+      explanation: "Present simple gebruik je voor gewoontes en feiten: 'I play football every week.' Bij he/she/it krijgt het werkwoord meestal -s. Present continuous gebruik je voor iets dat nu bezig is: am/is/are + werkwoord-ing.",
+      example: "She reads every evening (gewoonte). She is reading now (op dit moment).",
+      exercises: [
+        { q: "He ___ to school every day.", a: ["go", "goes", "is go", "going"], correct: 1, why: "Bij he in de present simple krijgt go een -es: he goes." },
+        { q: "Look! They ___ football now.", a: ["play", "plays", "are playing", "played"], correct: 2, why: "'Now' wijst op iets dat nu gebeurt: are playing." },
+        { q: "Welke zin beschrijft een gewoonte?", a: ["I am eating now.", "She is sleeping now.", "He walks to school every day.", "They are running now."], correct: 2, why: "'Every day' duidt op een gewoonte, dus present simple." }
+      ]
+    }
+  ],
+
+  "Biologie": [
+    {
+      title: "De plant en fotosynthese",
+      duration: "7 minuten",
+      levels: ["basisschool", "vmbo", "havo", "vwo", "mbo"],
+      introduction: "Planten maken met behulp van licht zelf suikers die ze nodig hebben om te groeien.",
+      explanation: "Bij fotosynthese gebruiken planten lichtenergie, water en koolstofdioxide om glucose te maken. Daarbij komt zuurstof vrij. Chlorofyl in de bladgroenkorrels vangt licht op.",
+      example: "In eenvoudige woorden: water + koolstofdioxide + lichtenergie → glucose + zuurstof.",
+      exercises: [
+        { q: "Welke stoffen gebruikt een plant bij fotosynthese?", a: ["Zuurstof en suiker alleen", "Water en koolstofdioxide, met lichtenergie", "Zand en stikstof", "Alleen water"], correct: 1, why: "Fotosynthese gebruikt water, koolstofdioxide en lichtenergie." },
+        { q: "Welk gas komt bij fotosynthese vrij?", a: ["Zuurstof", "Helium", "Methaan", "Waterstof"], correct: 0, why: "Bij fotosynthese komt zuurstof vrij." },
+        { q: "Welke stof vangt lichtenergie op in bladgroenkorrels?", a: ["Hemoglobine", "Chlorofyl", "Zetmeel", "Calcium"], correct: 1, why: "Chlorofyl, de groene kleurstof, vangt lichtenergie op." }
+      ]
+    },
+    {
+      title: "Cellen en organen",
+      duration: "8 minuten",
+      levels: ["vmbo", "havo", "vwo", "mbo"],
+      introduction: "Alle levende organismen bestaan uit cellen. Cellen kunnen verschillende taken hebben.",
+      explanation: "Een cel is een basiseenheid van leven. Cellen met vergelijkbare taken vormen weefsel. Verschillende weefsels werken samen in een orgaan, zoals het hart. Organen werken samen in orgaanstelsels.",
+      example: "Cel → weefsel → orgaan → orgaanstelsel → organisme.",
+      exercises: [
+        { q: "Wat is de juiste volgorde van klein naar groot?", a: ["Orgaan, cel, weefsel", "Cel, weefsel, orgaan", "Weefsel, organisme, cel", "Orgaanstelsel, cel, orgaan"], correct: 1, why: "Cellen vormen weefsels; weefsels vormen samen organen." },
+        { q: "Welk voorbeeld is een orgaan?", a: ["Een hart", "Een enkele spiercel", "Een bloedcel", "Een groep gelijksoortige cellen"], correct: 0, why: "Het hart bestaat uit verschillende weefsels en is een orgaan." },
+        { q: "Wat is een belangrijke functie van het celmembraan?", a: ["De cel begrenzen en regelen wat erin en eruit gaat", "Zonlicht maken", "Alleen zuurstof produceren", "Het hele organisme bewegen"], correct: 0, why: "Het celmembraan begrenst de cel en regelt transport van stoffen." }
+      ]
+    }
+  ],
+
+  "Geschiedenis": [
+    {
+      title: "Tijdlijnen en historische bronnen",
+      duration: "6 minuten",
+      levels: ["basisschool"],
+      introduction: "Historici onderzoeken het verleden met bronnen en zetten gebeurtenissen op tijdlijnen.",
+      explanation: "Een bron kan een voorwerp, tekst, foto of verhaal zijn. Een primaire bron komt uit de tijd die je onderzoekt. Een latere uitleg is een secundaire bron. Een tijdlijn helpt gebeurtenissen op volgorde te zetten.",
+      example: "Een dagboek uit 1944 is een primaire bron over die periode; een geschiedenisboek dat er later over schrijft is een secundaire bron.",
+      exercises: [
+        { q: "Waarvoor gebruik je een tijdlijn?", a: ["Om gebeurtenissen op volgorde te zetten", "Om afstanden te meten", "Om woorden te spellen", "Om het weer te voorspellen"], correct: 0, why: "Een tijdlijn laat zien wanneer gebeurtenissen plaatsvonden." },
+        { q: "Wat is een primaire bron?", a: ["Een moderne samenvatting", "Een dagboek uit de onderzochte tijd", "Een verzonnen verhaal", "Een hedendaagse filmrecensie"], correct: 1, why: "Een dagboek uit de onderzochte tijd is een bron uit die periode." },
+        { q: "Welk jaartal is het vroegst?", a: ["1600", "1200", "1800", "1500"], correct: 1, why: "1200 komt eerder dan 1500, 1600 en 1800." }
+      ]
+    },
+    {
+      title: "De industriële revolutie",
+      duration: "8 minuten",
+      levels: ["vmbo", "havo", "vwo", "mbo"],
+      introduction: "Tijdens de industriële revolutie veranderde productie van handwerk naar machines en fabrieken.",
+      explanation: "Vanaf de 18e eeuw werden in onder meer Groot-Brittannië steeds meer machines gebruikt. Fabrieken groeiden, steden werden groter en veel mensen trokken van het platteland naar de stad voor werk. Dit bracht nieuwe kansen, maar ook lange werkdagen en moeilijke woonomstandigheden.",
+      example: "Textiel dat vroeger thuis met de hand werd gemaakt, kon met machines in een fabriek veel sneller worden geproduceerd.",
+      exercises: [
+        { q: "Wat veranderde sterk tijdens de industriële revolutie?", a: ["Productie met machines en fabrieken nam toe", "Iedereen stopte met werken", "Steden verdwenen", "Er werden geen goederen meer gemaakt"], correct: 0, why: "Machines en fabrieken maakten grootschalige productie mogelijk." },
+        { q: "Waarom trokken veel mensen naar steden?", a: ["Voor werk in fabrieken", "Omdat er geen steden waren", "Om landbouw te verbieden", "Omdat machines niet bestonden"], correct: 0, why: "Fabrieken boden werk en trokken mensen naar de stad." },
+        { q: "Noem een mogelijk nadeel van vroeg fabriekswerk.", a: ["Altijd kortere werkdagen", "Lange werkdagen en slechte omstandigheden", "Geen producten", "Geen veranderingen in steden"], correct: 1, why: "Veel arbeiders hadden lange werkdagen en werkten onder moeilijke omstandigheden." }
+      ]
+    }
+  ],
+
+  "Aardrijkskunde": [
+    {
+      title: "Kaarten, legenda en windrichtingen",
+      duration: "6 minuten",
+      levels: ["basisschool"],
+      introduction: "Kaarten geven informatie over plaatsen, landschappen en routes.",
+      explanation: "Een legenda legt uit wat symbolen en kleuren betekenen. De noordpijl laat zien waar het noorden ligt. De vier hoofdwindrichtingen zijn noord, oost, zuid en west.",
+      example: "Als noord bovenaan staat, is oost meestal rechts en west links.",
+      exercises: [
+        { q: "Waarvoor dient een legenda op een kaart?", a: ["Om symbolen en kleuren uit te leggen", "Om de kaart te versieren", "Om de schaal te veranderen", "Om plaatsnamen te vertalen"], correct: 0, why: "De legenda vertelt wat de symbolen en kleuren betekenen." },
+        { q: "Welke richting ligt tegenover oost?", a: ["Noord", "Zuid", "West", "Noordoost"], correct: 2, why: "West ligt tegenover oost." },
+        { q: "Wat vertelt de schaal van een kaart?", a: ["De afstand op de kaart in verhouding tot de werkelijkheid", "De temperatuur", "De leeftijd van de kaartlezer", "De hoogte van letters"], correct: 0, why: "De schaal helpt kaartafstanden om te rekenen naar echte afstanden." }
+      ]
+    },
+    {
+      title: "Weer, klimaat en klimaatgrafieken",
+      duration: "8 minuten",
+      levels: ["vmbo", "havo", "vwo", "mbo"],
+      introduction: "Weer beschrijft de atmosfeer op korte termijn; klimaat beschrijft patronen over een lange periode.",
+      explanation: "Weer kan per uur veranderen. Klimaat wordt bepaald met gemiddelden en patronen over meestal tientallen jaren. In een klimaatgrafiek zie je vaak temperatuur per maand en neerslag per maand.",
+      example: "Een koude winterdag zegt weinig over het klimaat; gemiddelden van veel jaren geven een beter beeld.",
+      exercises: [
+        { q: "Wat is het verschil tussen weer en klimaat?", a: ["Er is geen verschil", "Weer is kortetermijn; klimaat is langetermijnpatroon", "Klimaat verandert elk uur", "Weer geldt alleen voor oceanen"], correct: 1, why: "Weer gaat over nu of binnenkort; klimaat over patronen over lange tijd." },
+        { q: "Wat laat een klimaatgrafiek vaak zien?", a: ["Temperatuur en neerslag per maand", "Alleen bevolkingsaantallen", "Windrichting op één dag", "Alleen aardbevingen"], correct: 0, why: "Klimaatgrafieken tonen meestal gemiddelde temperatuur en neerslag per maand." },
+        { q: "Welke uitspraak is het meest betrouwbaar?", a: ["Eén warme dag bewijst dat het klimaat warm is", "Klimaat beoordeel je met gegevens over lange perioden", "Het weer is overal hetzelfde", "Neerslag komt alleen in de winter voor"], correct: 1, why: "Klimaat beschrijf je met langjarige gemiddelden en patronen." }
+      ]
+    }
+  ]
+};
