@@ -767,7 +767,9 @@ function getSelectedGrade() {
 function renderLessonList(subject) {
   currentSubject = subject;
 
-  const subjectLessons = lessons[subject] || [];
+  const subjectLessons = (lessons[subject] || []).filter(
+  lesson => !lesson.levels || lesson.levels.includes(getSelectedSchoolLevel())
+);
 
   if ($("selectedSubjectTitle")) {
     $("selectedSubjectTitle").textContent = subject;
