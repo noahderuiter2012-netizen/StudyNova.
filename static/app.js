@@ -50,7 +50,7 @@ const quiz = [
 
 // VASTE LESSEN EN OEFENINGEN
 
-const lessons = {
+const lessons = window.studyNovaLessons || {
   "Wiskunde": [
     {
       title: "Vermenigvuldigen",
